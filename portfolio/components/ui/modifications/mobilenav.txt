@@ -1,0 +1,53 @@
+"use client"
+
+import React from 'react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import {CiMenuFries} from 'react-icons/ci';
+
+const links = [
+    {
+        name: "home",
+        href: "/",
+    },
+    {
+        name: "services",
+        href: "/services",
+    },
+    {
+        name: "resume",
+        href: "/resume",
+    },
+    {
+        name: "work",
+        href: "/work",
+    },
+    {
+        name: "contact",
+        href: "/contact",
+    },
+];
+
+const MobileNav = () => {
+    const pathname = usePathname();
+    return (
+        <Sheet>
+            <SheetTrigger className="flex justify-center items-center">
+                <CiMenuFries className="text-[32px] text-accent" />
+            </SheetTrigger>
+            <SheetContent className="flex flex-col">
+                {/* Logo - Image*/ }
+                <div className='mt-32 mb-40 text-center text-2xl'>Logo</div>
+                {/* Nav */}
+            </SheetContent>
+        </Sheet>
+    );
+};
+
+export default MobileNav;
+
+
+modifications
+line =                 <div className='mt-32 mb-40 text-center text-2xl'>Logo</div>
+faz o nome logo e pro centro e aumenta a letra
